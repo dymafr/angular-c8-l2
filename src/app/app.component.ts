@@ -33,10 +33,7 @@ export class AppComponent implements OnInit, OnDestroy {
     this.subscription1 = observable.subscribe(observer);
 
     // Notation raccourcie :
-    this.subscription2 = observable.subscribe({
-      next: (v) => console.log(v),
-      error: (e) => console.error(e)
-    });
+    this.subscription2 = observable.subscribe((v) => console.log(v));
   }
 
   ngOnDestroy() {
